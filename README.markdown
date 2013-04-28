@@ -24,7 +24,7 @@ Ctrl+K  分竖屏
 Ctrl+J  分横屏
 ```
 
-fuzzyfinder排除文件文档
+fuzzyfinder设置不列入筛选的文件
 
 `:h g:fuf_coveragefile_exclude@en`
 
