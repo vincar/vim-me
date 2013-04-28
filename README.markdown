@@ -41,11 +41,20 @@ nyy
 
 #### Vim代码缩进设置
 
-与自动缩进相关的变量表
+###### 与自动缩进相关的变量表
 ```
     变量名              缩进                              含义
-(no)autoindent          ai          自动缩进，即为新行自动添加与当前行同等的缩进。
+(no)autoindent          ai          自动缩进，即为新行自动添加与当前行同等的缩进
 (no)cindent             ci          类似C语言程序的缩进
 (no)smartindent         si          基于autoindent的一些改进
 ```
----------------------------
+
+###### 与TAB相关的变量表
+```
+    变量名              缩进                              含义
+tabstop=X               ts          编辑时一个TAB字符占多少个空格的位置
+shiftwidth=X            sw          使用每层缩进的空格数
+(no)expandtab           (no)et      是否将输入的TAB自动展开成空格
+softtabstop=X           sts         开启et后，每次退格(backspace)删除X个空格
+(no)smarttab            (no)sta     开启时，在行首按TAB将加入sw个空格，否则加入ts个空格
+```
