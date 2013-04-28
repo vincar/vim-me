@@ -1,4 +1,6 @@
+" 设定文件浏览器目录为当前目录
 set bsdir=buffer
+
 " 设置编码  
 set enc=utf-8
 
@@ -34,6 +36,18 @@ execute pathogen#infect()
 
 " 把 F8 映射到 启动NERDTree插件  
 map <F8> :NERDTree<CR>
+
+" fuzzyfinder 查找提示文字，缺省为 >CoverageFile!>
+let g:fuf_coveragefile_prompt='=>'
+
+" fuzzyfinder设置查找匹配个数，缺省为50个
+let g:fuf_enumeratingLimit=5000
+
+" fuzzyfinder映射快捷键为,,
+map ,, :FufCoverageFile!<CR>
+
+" fuzzyfinder设置不列入筛选的文件
+let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|\.gitkeep|**/.*.png)'
 
 " 设置注释行颜色
 hi Comment ctermfg=6
