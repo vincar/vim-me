@@ -22,11 +22,13 @@ set hlsearch
 " 缩进
 filetype indent on
 filetype plugin indent on
-autocmd FileType html set tabstop=2 shiftwidth=2
+autocmd FileType html setlocal tabstop=2 shiftwidth=2   " setlocal: 只对当前buffer有效
 "自动将tab转成空格
 set expandtab
-" 换行后自动缩进
+" 每层缩进空格数
 set shiftwidth=2
+" 设置expandtab后，每次退格删除空格数
+set softtabstop=4
 
 " 配色方案，查看colors目录下
 colorscheme github
@@ -44,7 +46,7 @@ let g:fuf_coveragefile_prompt='=>'
 let g:fuf_enumeratingLimit=5000
 
 " fuzzyfinder映射快捷键为,,
-map ,, :FufCoverageFile!<CR>
+map <F9> :FufCoverageFile!<CR>
 
 " fuzzyfinder设置不列入筛选的文件
 let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|\.gitkeep|**/.*.png)'
