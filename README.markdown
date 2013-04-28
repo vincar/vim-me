@@ -10,4 +10,5 @@
 :h snipMate
 ```
 
-NERDCommenter 注释或取消用\c <space>
+NERDCommenter 注释或取消
+`\c<space>`
