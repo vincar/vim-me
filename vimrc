@@ -17,9 +17,12 @@ set number
 set hlsearch
 
 " 缩进
-set tabstop=2
 filetype indent on
 filetype plugin indent on
+autocmd FileType html set tabstop=2
+
+" 配色方案，查看colors目录下
+colorscheme github
 
 " pathogen 配置
 execute pathogen#infect()

@@ -1,0 +1,9 @@
+1. 在/usr/share/fonts目录下建立一个子目录，例如，命令如下：
+    # mkdir /usr/share/fonts/droid-sans-mono
+2. 将DroidSansMono.ttf拷贝到该目录下
+3. 建立字体索引信息，更新字体缓存：
+    # cd /usr/share/fonts/droid-sans-mono
+    # mkfontscale
+    # mkfontdir
+    # fc-cache
+    至此，字体已经安装完毕！

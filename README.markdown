@@ -9,3 +9,5 @@
 :Helptags
 :h snipMate
 ```
+
+NERDCommenter 注释或取消用\c <space>
