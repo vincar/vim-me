@@ -1,3 +1,4 @@
+set bsdir=buffer
 " 设置编码  
 set enc=utf-8
 
@@ -19,7 +20,11 @@ set hlsearch
 " 缩进
 filetype indent on
 filetype plugin indent on
-autocmd FileType html set tabstop=2
+autocmd FileType html set tabstop=2 shiftwidth=2
+"自动将tab转成空格
+set expandtab
+" 换行后自动缩进
+set shiftwidth=2
 
 " 配色方案，查看colors目录下
 colorscheme github
