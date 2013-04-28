@@ -45,5 +45,7 @@ nyy
 ```
     变量名              缩进                              含义
 (no)autoindent          ai          自动缩进，即为新行自动添加与当前行同等的缩进。
+(no)cindent             ci          类似C语言程序的缩进
+(no)smartindent         si          基于autoindent的一些改进
 ```
 ---------------------------
