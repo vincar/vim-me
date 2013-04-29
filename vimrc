@@ -19,6 +19,9 @@ set number
 " 查找结果高亮度显示  
 set hlsearch
 
+" 忽略大小写敏感
+set ignorecase
+
 " 缩进
 filetype indent on
 filetype plugin indent on
@@ -30,6 +33,9 @@ set shiftwidth=2
 " 设置expandtab后，每次退格删除空格数
 set softtabstop=4
 
+" 开启文件类型插件，在万能补齐时使用
+filetype plugin on
+
 " 配色方案，查看colors目录下
 colorscheme github
 
@@ -37,7 +43,7 @@ colorscheme github
 execute pathogen#infect()
 
 " 把 F8 映射到 启动NERDTree插件  
-map <F8> :NERDTree<CR>
+map <F8> :NERDTree<cr>
 
 " fuzzyfinder 查找提示文字，缺省为 >CoverageFile!>
 let g:fuf_coveragefile_prompt='=>'
@@ -46,7 +52,12 @@ let g:fuf_coveragefile_prompt='=>'
 let g:fuf_enumeratingLimit=5000
 
 " fuzzyfinder映射快捷键为,,
-map <F9> :FufCoverageFile!<CR>
+map <F9> :FufCoverageFile!<cr>
+
+" 自定义插入文档创建时间，cdate<space>
+ia cdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+" 输出当前文件名
+ia filename <c-r>%<cr>
 
 " fuzzyfinder设置不列入筛选的文件
 let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|\.gitkeep|**/.*.png)'
