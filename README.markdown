@@ -83,10 +83,8 @@ zm	合上同一级别所有折叠
 zR	打开所有折叠级别
 zM	关闭所有的折叠级别
 
-
 :mkview	保持当前的折叠设置
 :loadview	重新打开后，重新折叠设置
-
 
 自动折叠方式
 :set foldmethod=indent
