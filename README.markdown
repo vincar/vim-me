@@ -89,3 +89,40 @@ zM	关闭所有的折叠级别
 自动折叠方式
 :set foldmethod=indent
 ```
+
+#### 文件自动补齐
+
+```
+vi .vimrc
+
+" 忽略大小写，ignorecase
+set ic
+" 设置常用单词的词典
+set dictionary+=/usr/share/dict/words
+map ,ss :setlocal spell!<cr>
+" 开启文件类型插件，代码万能补齐
+filetype plugin on
+" 自定义插入文档创建时间，cdate<space>
+ia cdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+
+英文单词的联想和补全功能: Ctrl+x Ctrl+k
+
+单词拼写检查
+:set spell
+
+修正错误单词: Ctrl+x s    (必须打开单词拼写检查)
+
+Ctrl+x f 编辑模式下，跳出文件路径选中
+
+Ctrl+n 补全当前文件中已存在的单词
+
+联想补齐全行:
+
+输入首字母，Ctrl+x l
+
+:h i_CTRL-@	查看编辑模块下，快捷键的文档
+
+Ctrl+x o	文件万能补全，vi需设置filetype plugin on
+
+:h new-omni-completion	查看万能补全文档
+```
