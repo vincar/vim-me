@@ -58,3 +58,36 @@ shiftwidth=X            sw          使用每层缩进的空格数
 softtabstop=X           sts         开启et后，每次退格(backspace)删除X个空格
 (no)smarttab            (no)sta     开启时，在行首按TAB将加入sw个空格，否则加入ts个空格
 ```
+
+#### Vim代码缩进
+
+```
+zf+4j   折叠当前行后面的4行代码(日常操作中难以使用)
+zd    删除折叠
+
+zf+%	折叠闭包内容，如{code...}
+
+按v进入可视模式下，选中行，然后按zf进行折叠
+
+zk	跳到上一个折叠位置，貌似没效果
+zj	跳到下一个折叠位置
+
+zo	打开折叠
+zc	关闭折叠
+
+多层折叠中常用快捷键
+
+zr	打开同一级别所有折叠
+zm	合上同一级别所有折叠
+
+zR	打开所有折叠级别
+zM	关闭所有的折叠级别
+
+
+:mkview	保持当前的折叠设置
+:loadview	重新打开后，重新折叠设置
+
+
+自动折叠方式
+:set foldmethod=indent
+```
