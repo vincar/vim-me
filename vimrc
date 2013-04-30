@@ -22,6 +22,10 @@ set hlsearch
 " 忽略大小写敏感
 set ignorecase
 
+"
+set laststatus=2        " 随时随地显示状态栏
+set statusline=%F:\ %l  " 状态栏显示格式，%F - 文件名；%l - 当前行号
+
 " 缩进
 filetype indent on
 filetype plugin indent on
