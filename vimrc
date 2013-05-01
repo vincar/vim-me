@@ -49,22 +49,17 @@ execute pathogen#infect()
 " 把 F8 映射到 启动NERDTree插件  
 map <F8> :NERDTree<cr>
 
-" fuzzyfinder 查找提示文字，缺省为 >CoverageFile!>
-let g:fuf_coveragefile_prompt='=>'
-
-" fuzzyfinder设置查找匹配个数，缺省为50个
-let g:fuf_enumeratingLimit=5000
-
-" fuzzyfinder映射快捷键为,,
-map <F9> :FufCoverageFile!<cr>
+" 把<F9>映射到 启动CtrlP插件
+let g:ctrlp_map='<F9>'
+" 缺省竖屏打开CtrlP的文件
+let g:ctrlp_open_multiple_files='v'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore={'dir':'\v[\/]\.(git)$','file':'\v\.(log|jpg|png|jpeg)$'}
 
 " 自定义插入文档创建时间，cdate<space>
 ia cdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
 " 输出当前文件名
 ia filename <c-r>%<cr>
-
-" fuzzyfinder设置不列入筛选的文件
-let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|\.gitkeep|**/.*.png)'
 
 " 设置注释行颜色
 hi Comment ctermfg=6
