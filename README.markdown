@@ -158,3 +158,10 @@ ctrlw o		# 关闭所有其它buffer窗口
 :set filetype	# 打印文件文件类型
 :set ft
 ```
+
+ctrlp常用快捷键
+```
+ctrl+d      # 切换查找文件夹或文件
+ctrl+z      # 设置要打开的文件
+ctrl+o      # 打开设置的多个文件
+```
