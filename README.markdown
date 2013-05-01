@@ -126,3 +126,35 @@ Ctrl+x o	文件万能补全，vi需设置filetype plugin on
 
 :h new-omni-completion	查看万能补全文档
 ```
+
+buffers操作
+```
+:h buffers
+
+:vs [filename]    竖屏
+
+:ls 查看缓冲区
+
+:b [n] 查看ls出来的buffer缓冲区
+
+:bd	# buffer delete. 关闭缓冲区
+
+:tabnew [tab_name]	# 新建标签
+:tabclose		# 关闭标签
+:tabNext		# 标签跳转
+
+.vimrc
+set laststatus=2	# 随时随地显示状态栏
+set statusline=%F:\ %l	# 状态栏格式：%F - 当前文件名；%l - 当前的行号
+
+:split [filename]	# 横屏载入新buffer
+
+ctrlw w		# buffer之间切换
+ctrlw +		# 扩大buffer窗口大小
+ctrlw -		# 将当前buffer最大
+
+ctrlw o		# 关闭所有其它buffer窗口
+
+:set filetype	# 打印文件文件类型
+:set ft
+```
