@@ -161,6 +161,7 @@ ctrlw o		# 关闭所有其它buffer窗口
 
 ctrlp常用快捷键
 ```
+ctrl+y      # 新建文件
 ctrl+d      # 切换查找文件夹或文件
 ctrl+z      # 设置要打开的文件
 ctrl+o      # 打开设置的多个文件
