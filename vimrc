@@ -53,7 +53,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore={'dir':'\v[\/]\.(git)$','file':'\v\.(log|jpg|png|jpeg)$'}
 
 " auto-save
-let g:auto_save = 1
+let g:auto_save = 0
 
 " 自定义插入文档创建时间，cdate<space>
 ia cdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
