@@ -1,0 +1,41 @@
+# begin view snippets
+snippet =
+	<% ${1} %>
+snippet ==
+	<%= ${1} %>
+snippet lt
+	<%= link_to "${1:text}", ${2:uri}%>
+snippet ff
+	<%= form_for @${1:model} do |f| %>
+	    ${2}
+	    <%= f.submit %>
+	<% end %>
+snippet fftf
+	<%= f.text_field :${1:attribute} %>
+snippet ffpf
+	<%= f.password_field :${1:password} %>
+snippet ffef
+	<%= f.email_field :${1:email} %>
+snippet ffta
+	<%= f.text_area :${1:attribute} %>
+snippet ffcb
+	<%= f.check_box :${1:attribute} %>
+snippet ffhf
+	<%= f.hidden_field :${1:attribute} %>
+snippet ffrb
+	<%= f.radio_box :${1:attribute}, :${2:value} %>
+snippet ffl
+	<%= f.label :${1:attribute} %>
+snippet ffff
+	<%= f.file_field :${1:attribute} %>
+# model snippets
+snippet vp
+	validates_presence_of :${1:attribute}
+snippet vu
+	validates_uniqueness_of :${1:attribute}
+snippet vn
+	validates_numericality_of :${1:attribute}
+snippet vl validates_length_of :attribute
+	validates_length_of :${1:attribute}
+snippet vl validates_length_of
+	validates_length_of :${1:attribute}, on: :create
