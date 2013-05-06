@@ -26,6 +26,7 @@ set ignorecase
 filetype indent on
 filetype plugin indent on
 autocmd FileType html setlocal tabstop=2 shiftwidth=2   " setlocal: 只对当前buffer有效
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2   " setlocal: 只对当前buffer有效
 "自动将tab转成空格
 set expandtab
 " 每层缩进空格数
